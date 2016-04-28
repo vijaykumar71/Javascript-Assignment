@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Simple data bind </title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <script src="~/Scripts/jquery-2.2.3.min.js"></script>
+    <style>
+        .task-container{
+            margin-top:40px;
+            background-color:gold;
+        }
+        .task-content{
+            width:100%;
+            margin-top:20px;
+        }
+        .task-title{
+            width:100%;
+            margin-top:20px;
+        }
+        .add-button{
+            
+            margin-top:20px;
+        }
+    </style>
+
+    </head>
+<body>
+    <div class="container-fluid row">
+        <div class=" col-xs-11 " style="margin-top:40px">
+            <div>
+                <div class="col-xs-offset-3 col-xs-6"  id="task"  style="background-color:whitesmoke">
+                    <div id="suggetion-text" onclick="displayForm();">
+                        <p  style="padding-top:13px">write note here.....</p>
+                    </div>
+                   
+                </div>
+                    
+            </div>
+            <div class="col-xs-12" id="item">
+                
+            </div>
+            
+
+        </div>
+        
+    </div>
+    <script>
+         var divItem = document.getElementById('task');
+         var newTitleDiv = document.createElement('div');
+         var newContentDiv = document.createElement('div');
+         var newfooterDiv = document.createElement('div');
+         var removalChiled = document.getElementById('suggestion-text');
+         var elementId=[];
+         var counter = 0;
+         var newListDiv;  
+         function displayForm() {
+             alert("Hello");
+                 newTitleDiv.innerHTML = '<input type="text" id="title" class="task-title"/>';
+                 newfooterDiv.innerHTML='<input type="button" value="Add Task" class="add-button" id="add" onClick="addItem();" />'
+                 newContentDiv.innerHTML = '<textarea class="task-content" id="content" ></textarea>';
+                 divItem.appendChild(newTitleDiv);
+                 divItem.appendChild(newContentDiv);
+                 divItem.appendChild(newfooterDiv);
+               
+         }
+         function addItem() {
+            
+             newListDiv = document.createElement('div');
+                 counter = eval(" counter + 1 ");
+                 elementId[eval('counter')] = newListDiv;
+                 alert(counter);
+                 var divListItem = document.getElementById('item');
+                 var newListTitleDiv = document.createElement('div');
+                 var newListContentDiv = document.createElement('div');
+                 var newListFooterDiv = document.createElement('div');
+                 newListDiv.className = 'col-xs-offset-1 col-xs-3  task-container';
+                 newListTitleDiv.innerHTML = '<div> <h2>' + document.getElementById('title').value + '</h2></div>';
+                 newListContentDiv.innerHTML = '<div> <h5>' + document.getElementById('content').value + '</h5></div>';
+                 newListFooterDiv.innerHTML = '<div> <input type="button" value="Delete"  /> <input type="button" value="Edit"/></div>';
+                 newListDiv.appendChild(newListTitleDiv);
+                 newListDiv.appendChild(newListContentDiv);
+                 newListDiv.appendChild(newListFooterDiv);
+                 divListItem.appendChild(newListDiv);
+                 divItem.removeChild(newTitleDiv);
+                 divItem.removeChild(newContentDiv);
+                 divItem.removeChild(newfooterDiv);
+                 
+                 
+         }
+       
+    </script>
+</body>
+</html>
