@@ -1,0 +1,2 @@
+# Javascript-Assignment
+Part1
