@@ -1,0 +1,63 @@
+﻿
+ .task-container {
+          margin-top: 40px;
+          background-color:whitesmoke;
+           
+        }
+
+        .task-content {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .task-title {
+            
+            width: 100%;
+            margin-top: 20px;
+            border:none;
+            height:50px;
+           
+
+        }
+        .toggle-icon{
+        width:30px;
+        height:30px;
+    }
+
+        .add-button {
+            margin-top: 20px;
+            margin-bottom:20px;    
+        }
+        .content-text{
+          margin-top:10px;
+          width:100%;
+          font-size:16px;
+          max-width:310px;
+        }
+        .title-text{
+          margin-top:10px;
+          width:100%;
+          font-size:24px;
+          font-weight:bold;
+          max-width:310px;
+          
+        }
+       
+     .footer{
+         text-align:right;
+     }   
+     .nav-bar{
+         text-align:center;
+         background-color:gray;
+         color:white;
+         font-size:40px;
+     }
+     .main-container{
+         margin-top:40px;
+     }
+     .form-background{
+         background-color:whitesmoke;
+     }
+     .suggestion-padding{
+         padding-top:13px;
+     }

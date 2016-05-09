@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Simple data bind </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    <link href="~/Content/Task.css" rel="stylesheet" />
+   
+</head>
+<body >
+    <div class="row container-fluid">
+        <div class="nav-bar">
+            <p>KEEP MEMORY</p>
+            
+        </div>
+    </div>
+    <div class="container-fluid row">
+        <div class=" col-xs-11 main-container ">
+            <div>
+                <div class="col-xs-offset-3 col-xs-6 form-background" id="task">
+                    <div id="suggetion-text" onclick="displayForm();">
+                        <p class="suggestion-padding">write note here.....</p>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-xs-12" id="item">
+
+            </div>
+
+
+        </div>
+
+    </div>
+   
+    <script src="~/Scripts/TaskScript.js"></script>
+</body>
+</html>
